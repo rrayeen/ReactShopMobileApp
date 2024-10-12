@@ -1,8 +1,8 @@
-import {View, Text, StyleProp, ViewStyle} from 'react-native';
 import React from 'react';
-import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
-import {Colors} from '../constant/Colors';
+import {StyleProp, ViewStyle} from 'react-native';
 import Animated from 'react-native-reanimated';
+import {Colors} from '../constant/Colors';
+import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
 type ViewProps = {
   Styles?: StyleProp<ViewStyle>;
 };

@@ -1,16 +1,16 @@
-import {View, Text, Pressable, StyleSheet} from 'react-native';
 import React, {memo} from 'react';
-import {CImage} from './CImage';
-import {CText} from './CText';
+import {Pressable, StyleSheet, View} from 'react-native';
 import Icon from 'react-native-easy-icon';
-import Model from './models/Model';
-import {SCREEN_WIDTH} from '../../utils/dimension';
+import Animated from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
-import {selectUser} from '../store/authSlice';
+import {SCREEN_WIDTH} from '../../utils/dimension';
 import {Colors} from '../constant/Colors';
 import {shadows} from '../constant/Shadows';
 import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
-import Animated from 'react-native-reanimated';
+import {selectUser} from '../store/authSlice';
+import {CImage} from './CImage';
+import {CText} from './CText';
+import Model from './models/Model';
 type layoutTypes = {
   x: number;
   y: number;

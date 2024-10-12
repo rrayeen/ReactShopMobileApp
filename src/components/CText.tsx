@@ -1,8 +1,8 @@
-import {StyleSheet, Text, TextProps} from 'react-native';
-import {Colors} from '../constant/Colors';
 import {useMemo} from 'react';
-import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
+import {StyleSheet, TextProps} from 'react-native';
 import Animated from 'react-native-reanimated';
+import {Colors} from '../constant/Colors';
+import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
 
 type WeightKeys = keyof typeof weightStyles;
 type StylesKeys = Exclude<keyof typeof styles, 'base'>;

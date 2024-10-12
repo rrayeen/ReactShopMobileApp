@@ -2,10 +2,10 @@ import {
   createNativeStackNavigator,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import {ProfileStackRouts} from '../routes';
-import {navigatorConfig} from '../navigatorConfig';
-import Profile from '../../models/Tabs/profile/Profile';
 import Purchase from '../../models/Purchase';
+import Profile from '../../models/Tabs/profile/Profile';
+import {navigatorConfig} from '../navigatorConfig';
+import {ProfileStackRouts} from '../routes';
 
 export type ProfileStackParamList = {
   [ProfileStackRouts.PROFILE]: undefined;

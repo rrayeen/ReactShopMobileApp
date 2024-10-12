@@ -2,9 +2,9 @@ import {
   createNativeStackNavigator,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import {LoaderStackRouts} from '../routes';
-import {navigatorConfig} from '../navigatorConfig';
 import Loader from '../../components/LoadingScreen/Loader';
+import {navigatorConfig} from '../navigatorConfig';
+import {LoaderStackRouts} from '../routes';
 
 type loaderStackParamList = {
   [LoaderStackRouts.LOADER]: undefined;

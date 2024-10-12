@@ -1,26 +1,22 @@
-import {View, Text} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import Screen from '../components/Screen';
-import BackButton from '../components/Buttons/BackButton';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {CartStackScreenProps} from '../navigators/stacks/CartNavgator';
+import React, {useEffect} from 'react';
 import {useForm} from 'react-hook-form';
-import {useAppDispatch, useAppSelector} from '../store/store';
-import {selectUser} from '../store/authSlice';
-import CButton from '../components/Buttons/CButton';
-import ControlledInput from '../components/ControlledInput';
+import {View} from 'react-native';
 import {SCREEN_WIDTH} from '../../utils/dimension';
 import {validateEmail} from '../../utils/helper';
-import {clearCart, selectCart} from '../store/cartSlice';
+import BackButton from '../components/Buttons/BackButton';
+import CButton from '../components/Buttons/CButton';
+import ControlledInput from '../components/ControlledInput';
+import Loader from '../components/LoadingScreen/Loader';
+import Screen from '../components/Screen';
+import {CartStackRouts} from '../navigators/routes';
+import {CartStackScreenProps} from '../navigators/stacks/CartNavgator';
 import {
   useNewRecipe,
   useUpdateQnatity,
 } from '../react-query/queries/purchase/purchaseQueries';
-import Loader from '../components/LoadingScreen/Loader';
-import {isPending} from '@reduxjs/toolkit';
-import {set} from 'date-fns';
-import {CText} from '../components/CText';
-import {CartStackRouts} from '../navigators/routes';
+import {selectUser} from '../store/authSlice';
+import {selectCart} from '../store/cartSlice';
+import {useAppDispatch, useAppSelector} from '../store/store';
 
 type DataProps = {
   username: string;
@@ -54,13 +50,12 @@ const Payment = ({navigation}: CartStackScreenProps<'Payment'>) => {
   } = useForm({
     defaultValues: {
       username: user?.username || '',
-      email: 'qslfhq@example.com',
-      phone: '1111111111111111',
+      email: '',
+      phone: '',
       address: user?.adress || '',
-
-      cartNumber: '1111111111111111',
-      cvc: '111',
-      expiry: '3333',
+      cartNumber: '',
+      cvc: '',
+      expiry: '',
     },
   });
   const id = Math.random().toString(16).slice(2);

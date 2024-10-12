@@ -8,26 +8,25 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
 import RNBootSplash from 'react-native-bootsplash';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import RootNavigator from './navigators/stacks/RootNavigator';
-import {ThemeProvider} from './context/ThemeContext';
+import {Provider} from 'react-redux';
 import {CStatusBar} from './components/CStatusBar';
+import {ThemeProvider} from './context/ThemeContext';
+import RootNavigator from './navigators/stacks/RootNavigator';
 import PersistQueryProvider from './react-query/PersistQueryProvider';
 import {persistOptions, queryClient} from './react-query/queryClient';
-import {Provider} from 'react-redux';
 
 import Toast, {
   BaseToast,
-  ErrorToast,
   BaseToastProps,
-  ToastProps,
+  ErrorToast,
 } from 'react-native-toast-message';
 
-import {store} from './store/store';
 import {Colors} from './constant/Colors';
+import {store} from './store/store';
 
 const toastConsfig = {
   success: (props: BaseToastProps) => {

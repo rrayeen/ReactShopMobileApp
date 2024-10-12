@@ -1,28 +1,27 @@
-import {Pressable, StyleSheet, View} from 'react-native';
-import React, {useEffect, useMemo, useState} from 'react';
-import {ThemeContext} from '../../../context/ThemeContext';
-import {HomeStackScreenProps} from '../../../navigators/stacks/HomeNavigator';
-import ControlledInput from '../../../components/ControlledInput';
+import React, {useEffect, useState} from 'react';
 import {useForm} from 'react-hook-form';
+import {Pressable, StyleSheet} from 'react-native';
+import ControlledInput from '../../../components/ControlledInput';
+import {HomeStackScreenProps} from '../../../navigators/stacks/HomeNavigator';
 
+import {FlashList} from '@shopify/flash-list';
 import Screen from '../../../components/Screen';
 import {Logout} from '../../../react-query/queries/auth/authQueries';
-import {useAppDispatch} from '../../../store/store';
 import {setIsAuthenticated, setUser} from '../../../store/authSlice';
-import {FlashList} from '@shopify/flash-list';
+import {useAppDispatch} from '../../../store/store';
 
-import {getAllProduct} from '../../../react-query/queries/product/productQueries';
-import Loader from '../../../components/LoadingScreen/Loader';
 import HeaderMenu from '../../../components/HeaderMenu';
+import Loader from '../../../components/LoadingScreen/Loader';
+import {getAllProduct} from '../../../react-query/queries/product/productQueries';
 
-import EmptyComponent from '../../../components/EmptyComponent';
-import {shadows} from '../../../constant/Shadows';
-import ProductComponent from '../../../components/productComponents/ProductComponent';
-import {quantityCheck} from '../../../store/cartSlice';
-import PickerOrder from '../../../components/PickerOrder';
 import Icon from 'react-native-easy-icon';
+import EmptyComponent from '../../../components/EmptyComponent';
+import PickerOrder from '../../../components/PickerOrder';
+import ProductComponent from '../../../components/productComponents/ProductComponent';
+import {shadows} from '../../../constant/Shadows';
 import {ProductTypes} from '../../../react-query/queries/product/products';
 import {queryClient} from '../../../react-query/queryClient';
+import {quantityCheck} from '../../../store/cartSlice';
 
 const Home = ({navigation}: HomeStackScreenProps<'Home_Home'>) => {
   const [order, setOrder] = useState('');

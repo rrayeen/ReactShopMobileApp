@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import {
   useAnimatedStyle,
   useSharedValue,
@@ -5,7 +6,6 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../../utils/dimension';
-import {useEffect} from 'react';
 
 export const useLoaderAnimation = () => {
   const margin = 48;

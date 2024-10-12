@@ -1,6 +1,6 @@
 import {FasterImageView} from '@candlefinance/faster-image';
 import React from 'react';
-import {Image, StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
+import {Image, StyleProp, StyleSheet, ViewStyle} from 'react-native';
 import Animated from 'react-native-reanimated';
 interface CustomImageProps {
   source: string;

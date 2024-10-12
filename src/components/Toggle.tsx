@@ -1,7 +1,7 @@
-import {View, Pressable, StyleSheet} from 'react-native';
 import React from 'react';
-import {Colors} from '../constant/Colors';
+import {Pressable, StyleSheet, View} from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
+import {Colors} from '../constant/Colors';
 interface toggleProps {
   activated: boolean;
   onPressHandler: () => void;

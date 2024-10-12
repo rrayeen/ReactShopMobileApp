@@ -1,8 +1,7 @@
-import {Text, ViewStyle, StyleProp, View} from 'react-native';
 import React, {useMemo} from 'react';
+import Animated from 'react-native-reanimated';
 import {Colors} from '../constant/Colors';
 import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
-import Animated from 'react-native-reanimated';
 
 type SeparatorColor = keyof (typeof Colors)['separator']['light'];
 

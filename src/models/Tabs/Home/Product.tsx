@@ -1,34 +1,25 @@
-import {View, Text} from 'react-native';
-import React, {useContext, useEffect, useState} from 'react';
-import {useCTheme} from '../../../hooks/useCTheme';
-import {ThemeContext} from '../../../context/ThemeContext';
-import {HomeStackScreenProps} from '../../../navigators/stacks/HomeNavigator';
-import Screen from '../../../components/Screen';
-import {CText} from '../../../components/CText';
-import {useGetProduct} from '../../../react-query/queries/product/productQueries';
-import Loader from '../../../components/LoadingScreen/Loader';
-import {CImage} from '../../../components/CImage';
+import {useQueryClient} from '@tanstack/react-query';
+import React, {useEffect, useState} from 'react';
+import {View} from 'react-native';
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../../../utils/dimension';
-import Separator from '../../../components/Separator';
 import {formatCurrency} from '../../../../utils/helper';
+import BackButton from '../../../components/Buttons/BackButton';
 import CButton from '../../../components/Buttons/CButton';
-import Icon from 'react-native-easy-icon';
-import {shadows} from '../../../constant/Shadows';
-import {useGetComments} from '../../../react-query/queries/comments/commentsQuery';
+import {CImage} from '../../../components/CImage';
+import {CText} from '../../../components/CText';
+import Loader from '../../../components/LoadingScreen/Loader';
 import CommentComponents from '../../../components/productComponents/CommentComponents';
 import CommentForm from '../../../components/productComponents/CommentForm';
-import {useAppDispatch, useAppSelector} from '../../../store/store';
-import {selectUser} from '../../../store/authSlice';
-import {
-  addToCart,
-  clearCart,
-  quantityCheck,
-  selectCart,
-} from '../../../store/cartSlice';
+import Screen from '../../../components/Screen';
+import Separator from '../../../components/Separator';
+import {HomeStackScreenProps} from '../../../navigators/stacks/HomeNavigator';
+import {useGetComments} from '../../../react-query/queries/comments/commentsQuery';
+import {useGetProduct} from '../../../react-query/queries/product/productQueries';
 import {PersistenceStorage} from '../../../storage';
 import {KEYS} from '../../../storage/Keys';
-import BackButton from '../../../components/Buttons/BackButton';
-import {useQueryClient} from '@tanstack/react-query';
+import {selectUser} from '../../../store/authSlice';
+import {addToCart, quantityCheck, selectCart} from '../../../store/cartSlice';
+import {useAppDispatch, useAppSelector} from '../../../store/store';
 
 const Product = ({navigation, route}: HomeStackScreenProps<'Product'>) => {
   const queryClient = useQueryClient();

@@ -1,19 +1,16 @@
-import {View, Text, Button, StyleSheet, Pressable} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {AuthStackScreenProps} from '../../navigators/stacks/AuthNavigator';
-import ControlledInput from '../../components/ControlledInput';
-import {useCTheme} from '../../hooks/useCTheme';
-import CButton from '../../components/Buttons/CButton';
-import {CText} from '../../components/CText';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
-import Screen from '../../components/Screen';
-import TitleWithDelay from '../../components/TitleWithDelay';
-import WelcomeHeader from '../../components/WelcomeHeader';
-import {authStyles} from './Login';
-import {useSignUp} from '../../react-query/queries/auth/authQueries';
-import {validateEmail, validateEmailAndPassword} from '../../../utils/helper';
+import {Pressable, View} from 'react-native';
 import Icon from 'react-native-easy-icon';
+import {validateEmail} from '../../../utils/helper';
+import CButton from '../../components/Buttons/CButton';
+import ControlledInput from '../../components/ControlledInput';
+import {CText} from '../../components/CText';
+import Screen from '../../components/Screen';
+import WelcomeHeader from '../../components/WelcomeHeader';
+import {AuthStackScreenProps} from '../../navigators/stacks/AuthNavigator';
+import {useSignUp} from '../../react-query/queries/auth/authQueries';
+import {authStyles} from './Login';
 
 type formData = {
   username: string;

@@ -1,4 +1,3 @@
-import {View, Text} from 'react-native';
 import React from 'react';
 import {Control, Controller, FieldValues, Path} from 'react-hook-form';
 import {CTextInput, customTextInputProps as cInputProps} from './CTextInput';

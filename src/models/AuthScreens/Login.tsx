@@ -1,24 +1,16 @@
-import {View, Text, StyleSheet, Button, Pressable} from 'react-native';
-import React, {useEffect, useMemo, useState} from 'react';
-import {AuthStackScreenProps} from '../../navigators/stacks/AuthNavigator';
-import Screen from '../../components/Screen';
-import ControlledInput from '../../components/ControlledInput';
+import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
+import {Pressable, StyleSheet, View} from 'react-native';
 import CButton from '../../components/Buttons/CButton';
+import ControlledInput from '../../components/ControlledInput';
 import {CText} from '../../components/CText';
-import {Colors} from '../../constant/Colors';
+import Screen from '../../components/Screen';
+import {AuthStackScreenProps} from '../../navigators/stacks/AuthNavigator';
 
-import WelcomeHeader from '../../components/WelcomeHeader';
-import {validateEmailAndPassword} from '../../../utils/helper';
-import {GetLogin, GetSession} from '../../react-query/queries/auth/authQueries';
-import {useAppDispatch, useAppSelector} from '../../store/store';
-import {
-  selectIsAuthenticated,
-  setIsAuthenticated,
-  setUser,
-} from '../../store/authSlice';
-import Loader from '../../components/LoadingScreen/Loader';
 import Icon from 'react-native-easy-icon';
+import Loader from '../../components/LoadingScreen/Loader';
+import WelcomeHeader from '../../components/WelcomeHeader';
+import {GetLogin} from '../../react-query/queries/auth/authQueries';
 
 type formData = {
   email: string;

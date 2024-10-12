@@ -1,17 +1,17 @@
 import React from 'react';
 import {Pressable, StyleSheet, View} from 'react-native';
+import Icon from 'react-native-easy-icon';
+import {formatCurrency} from '../../utils/helper';
+import {Colors} from '../constant/Colors';
 import {
   cartType,
   decreaseQuantity,
   increaseQuantity,
   removeItem,
 } from '../store/cartSlice';
+import {useAppDispatch} from '../store/store';
 import {CImage} from './CImage';
 import {CText} from './CText';
-import {formatCurrency} from '../../utils/helper';
-import Icon from 'react-native-easy-icon';
-import {Colors} from '../constant/Colors';
-import {useAppDispatch} from '../store/store';
 import Separator from './Separator';
 
 type props = {

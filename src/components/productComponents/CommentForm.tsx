@@ -1,23 +1,15 @@
-import {View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
-import {CImage} from '../CImage';
-import {
-  commentType,
-  newCommentType,
-} from '../../react-query/queries/comments/comments';
-import {CText} from '../CText';
-import {Colors} from '../../constant/Colors';
-import Icon from 'react-native-easy-icon';
-import {useAppSelector} from '../../store/store';
-import {selectUser} from '../../store/authSlice';
-import {
-  useAddComment,
-  useDeleteComment,
-} from '../../react-query/queries/comments/commentsQuery';
-import ControlledInput from '../ControlledInput';
 import {useForm} from 'react-hook-form';
+import {StyleSheet, View} from 'react-native';
+import {Colors} from '../../constant/Colors';
+import {newCommentType} from '../../react-query/queries/comments/comments';
+import {useAddComment} from '../../react-query/queries/comments/commentsQuery';
+import {selectUser} from '../../store/authSlice';
+import {useAppSelector} from '../../store/store';
 import CButton from '../Buttons/CButton';
-import {set} from 'date-fns';
+import {CImage} from '../CImage';
+import ControlledInput from '../ControlledInput';
+import {CText} from '../CText';
 type props = Partial<newCommentType> & {
   setComment: React.Dispatch<React.SetStateAction<boolean>>;
 };

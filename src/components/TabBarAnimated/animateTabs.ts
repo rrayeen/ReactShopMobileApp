@@ -1,18 +1,14 @@
-import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
-import {ParamListBase, TabNavigationState} from '@react-navigation/native';
 import {useEffect} from 'react';
 import {
   Easing,
-  interpolate,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withSequence,
   withTiming,
 } from 'react-native-reanimated';
-import {SCREEN_WIDTH} from '../../../utils/dimension';
-import {useCTheme} from '../../hooks/useCTheme';
 import {Colors} from '../../constant/Colors';
+import {useCTheme} from '../../hooks/useCTheme';
 interface animatedProps {
   layout: any;
   activeIndex: number;

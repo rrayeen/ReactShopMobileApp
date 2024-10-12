@@ -1,8 +1,8 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import {CImage} from './CImage';
-import {empty} from '../constant/images';
+import {View} from 'react-native';
 import {SCREEN_WIDTH} from '../../utils/dimension';
+import {empty} from '../constant/images';
+import {CImage} from './CImage';
 import {CText} from './CText';
 
 const EmptyComponent = ({msg}: {msg: string}) => {

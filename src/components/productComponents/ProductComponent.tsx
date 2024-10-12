@@ -1,11 +1,11 @@
+import {memo} from 'react';
 import {Pressable, StyleSheet, View} from 'react-native';
+import {SCREEN_WIDTH} from '../../../utils/dimension';
+import {formatCurrency} from '../../../utils/helper';
+import {Colors} from '../../constant/Colors';
 import {shadows} from '../../constant/Shadows';
 import {CImage} from '../CImage';
 import {CText} from '../CText';
-import {formatCurrency} from '../../../utils/helper';
-import {SCREEN_WIDTH} from '../../../utils/dimension';
-import {Colors} from '../../constant/Colors';
-import {memo} from 'react';
 
 type ProductComponentProps = {
   image: string;

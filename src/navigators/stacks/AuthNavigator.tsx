@@ -2,10 +2,10 @@ import {
   createNativeStackNavigator,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import {AuthStackRouts} from '../routes';
 import Login from '../../models/AuthScreens/Login';
 import Register from '../../models/AuthScreens/Register';
 import {navigatorConfig} from '../navigatorConfig';
+import {AuthStackRouts} from '../routes';
 
 export type AuthStackParamList = {
   [AuthStackRouts.LOGIN]: undefined;

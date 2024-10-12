@@ -1,16 +1,14 @@
-import {View, Text, StyleSheet} from 'react-native';
 import React, {useEffect} from 'react';
-import Screen from '../../../components/Screen';
-import Separator from '../../../components/Separator';
-import {PersistenceStorage} from '../../../storage';
-import {KEYS} from '../../../storage/Keys';
-import {useAppDispatch, useAppSelector} from '../../../store/store';
-import {clearCart, quantityCheck, selectCart} from '../../../store/cartSlice';
+import {StyleSheet, View} from 'react-native';
+import CButton from '../../../components/Buttons/CButton';
 import CartItem from '../../../components/CartItem';
 import EmptyComponent from '../../../components/EmptyComponent';
-import CButton from '../../../components/Buttons/CButton';
-import {CartStackScreenProps} from '../../../navigators/stacks/CartNavgator';
+import Screen from '../../../components/Screen';
+import Separator from '../../../components/Separator';
 import {CartStackRouts} from '../../../navigators/routes';
+import {CartStackScreenProps} from '../../../navigators/stacks/CartNavgator';
+import {clearCart, quantityCheck, selectCart} from '../../../store/cartSlice';
+import {useAppDispatch, useAppSelector} from '../../../store/store';
 
 const Cart = ({navigation}: CartStackScreenProps<'Carte'>) => {
   const cart = useAppSelector(selectCart);

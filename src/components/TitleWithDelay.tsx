@@ -1,5 +1,5 @@
-import {View, ViewStyle, StyleProp} from 'react-native';
 import React, {useMemo} from 'react';
+import {StyleProp, View, ViewStyle} from 'react-native';
 import useOpacityDelay from '../hooks/useOpacityDelay';
 import {CText, CustomProps, TextSizes} from './CText';
 type Props = {

@@ -1,11 +1,8 @@
 import React, {useMemo} from 'react';
-import Screen from '../Screen';
-import {CText} from '../CText';
-import {View} from 'react-native';
-import {useLoaderAnimation} from './useLoaderAnimation';
 import Animated from 'react-native-reanimated';
-import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../../utils/dimension';
 import {Colors} from '../../constant/Colors';
+import Screen from '../Screen';
+import {useLoaderAnimation} from './useLoaderAnimation';
 
 const Loader = () => {
   const {animatedBorder, animatedScreen, animatedButton} = useLoaderAnimation();

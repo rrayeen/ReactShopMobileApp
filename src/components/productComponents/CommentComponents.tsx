@@ -1,13 +1,13 @@
-import {View, Text, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
-import {CImage} from '../CImage';
-import {commentType} from '../../react-query/queries/comments/comments';
-import {CText} from '../CText';
-import {Colors} from '../../constant/Colors';
+import {Pressable, StyleSheet, View} from 'react-native';
 import Icon from 'react-native-easy-icon';
-import {useAppSelector} from '../../store/store';
-import {selectUser} from '../../store/authSlice';
+import {Colors} from '../../constant/Colors';
+import {commentType} from '../../react-query/queries/comments/comments';
 import {useDeleteComment} from '../../react-query/queries/comments/commentsQuery';
+import {selectUser} from '../../store/authSlice';
+import {useAppSelector} from '../../store/store';
+import {CImage} from '../CImage';
+import {CText} from '../CText';
 
 const CommentComponents = ({
   id,

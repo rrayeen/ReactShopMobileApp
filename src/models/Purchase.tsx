@@ -1,7 +1,7 @@
+import BackButton from '../components/Buttons/BackButton';
+import {CText} from '../components/CText';
 import Screen from '../components/Screen';
 import {ProfileStackScreenProps} from '../navigators/stacks/ProfileNavigator';
-import {CText} from '../components/CText';
-import BackButton from '../components/Buttons/BackButton';
 
 import {format} from 'date-fns';
 import {View} from 'react-native';

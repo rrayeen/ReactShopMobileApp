@@ -1,12 +1,10 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NativeStackScreenProps} from 'react-native-screens/lib/typescript/native-stack/types';
-import {navigatorConfig} from '../navigatorConfig';
-import {CartStackRouts} from '../routes';
+import Payment from '../../models/Payment';
 import Purchase from '../../models/Purchase';
 import Cart from '../../models/Tabs/cart/Cart';
-import Payment from '../../models/Payment';
-import {newRecipeType} from '../../react-query/queries/purchase/purchase';
-import {RouteProp} from '@react-navigation/native';
+import {navigatorConfig} from '../navigatorConfig';
+import {CartStackRouts} from '../routes';
 
 export type CartStackParamList = {
   [CartStackRouts.CART]: undefined;

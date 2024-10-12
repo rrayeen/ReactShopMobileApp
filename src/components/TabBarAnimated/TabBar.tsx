@@ -1,12 +1,12 @@
-import {View, Text, StyleSheet, LayoutChangeEvent} from 'react-native';
-import React, {useEffect, useMemo, useReducer} from 'react';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
-import {SCREEN_WIDTH} from '../../../utils/dimension';
+import React, {useMemo, useReducer} from 'react';
+import {LayoutChangeEvent, StyleSheet} from 'react-native';
 import Animated from 'react-native-reanimated';
+import {SCREEN_WIDTH} from '../../../utils/dimension';
+import {Colors} from '../../constant/Colors';
+import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
 import TabItem from './TabItem';
 import {useAnimateTabs} from './animateTabs';
-import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
-import {Colors} from '../../constant/Colors';
 
 const tabHeight = 86;
 type actiontype = {

@@ -1,25 +1,22 @@
 /*************  ✨ Codeium Command 🌟  *************/
 // This component is a custom implementation of a screen component that handles some edge cases and provides some additional features.
+import {useHeaderHeight} from '@react-navigation/elements';
+import React, {PropsWithChildren, useRef} from 'react';
 import {
-  View,
-  Text,
   KeyboardAvoidingView,
+  RefreshControl,
   ScrollView,
-  ViewStyle,
   StyleProp,
   StyleSheet,
-  RefreshControl,
+  ViewStyle,
 } from 'react-native';
-import React, {PropsWithChildren, useRef} from 'react';
-import Animated, {useHandler} from 'react-native-reanimated';
-import {useHeaderHeight} from '@react-navigation/elements';
-import {useAutoScroll} from '../hooks/useAutoScroll';
-import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
-import {Colors} from '../constant/Colors';
+import Animated from 'react-native-reanimated';
 import {Edges, SafeAreaView} from 'react-native-safe-area-context';
 import {getEdges} from '../../utils/getEdges';
 import {IS_IOS} from '../../utils/platform';
-import useAnimatedKeyBoard from '../hooks/useAnimatedKeyBoard';
+import {Colors} from '../constant/Colors';
+import {useAutoScroll} from '../hooks/useAutoScroll';
+import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
 
 // - It uses the `useHeaderHeight` hook to get the height of the header and pass it to the `KeyboardAvoidingView` component, so that the keyboard will be properly positioned when the user interacts with a text input.
 interface screenProps {

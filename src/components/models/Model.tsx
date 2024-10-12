@@ -1,22 +1,15 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  ViewStyle,
-  StyleProp,
-  Pressable,
-} from 'react-native';
 import React, {useMemo} from 'react';
-import {CText} from '../CText';
-import Toggle from '../Toggle';
+import {Pressable, StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import Icon from 'react-native-easy-icon';
-import {useCTheme} from '../../hooks/useCTheme';
-import {Colors} from '../../constant/Colors';
-import {SCREEN_WIDTH} from '../../../utils/dimension';
-import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
 import Animated from 'react-native-reanimated';
+import {SCREEN_WIDTH} from '../../../utils/dimension';
+import {Colors} from '../../constant/Colors';
+import {useCTheme} from '../../hooks/useCTheme';
+import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
 import {Logout} from '../../react-query/queries/auth/authQueries';
+import {CText} from '../CText';
 import Separator from '../Separator';
+import Toggle from '../Toggle';
 type ModelProps = {
   style?: StyleProp<ViewStyle>;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;

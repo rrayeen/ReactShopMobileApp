@@ -1,24 +1,20 @@
-import {CompositeScreenProps} from '@react-navigation/native';
-import {TabStackRouts} from '../routes';
-import {RootStackParamList, RootStackScreenProps} from './RootNavigator';
 import {
   BottomTabScreenProps,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import Profile from '../../models/Tabs/profile/Profile';
-import {tabConfig} from '../navigatorConfig';
-import HomeNavigator from './HomeNavigator';
-import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
-import {Colors} from '../../constant/Colors';
+import {CompositeScreenProps} from '@react-navigation/native';
 import React, {useMemo} from 'react';
-import Icon from 'react-native-easy-icon';
-import {StyleSheet, View} from 'react-native';
-import Animated from 'react-native-reanimated';
-import {useCTheme} from '../../hooks/useCTheme';
-import {shadows} from '../../constant/Shadows';
+import {StyleSheet} from 'react-native';
 import TabBar from '../../components/TabBarAnimated/TabBar';
-import {ProfileNavigator} from './ProfileNavigator';
+import {Colors} from '../../constant/Colors';
+import {shadows} from '../../constant/Shadows';
+import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
+import {tabConfig} from '../navigatorConfig';
+import {TabStackRouts} from '../routes';
 import {CartNavigator} from './CartNavgator';
+import HomeNavigator from './HomeNavigator';
+import {ProfileNavigator} from './ProfileNavigator';
+import {RootStackParamList, RootStackScreenProps} from './RootNavigator';
 export type TabStackParamList = {
   [TabStackRouts.HOME]: undefined;
   [TabStackRouts.PROFILE]: undefined;

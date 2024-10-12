@@ -1,8 +1,8 @@
-import {View, Text, StyleSheet} from 'react-native';
-import React, {memo, useRef, useState} from 'react';
-import {Colors} from '../constant/Colors';
-import {SCREEN_WIDTH} from '../../utils/dimension';
 import {Picker} from '@react-native-picker/picker';
+import React, {memo, useRef} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {SCREEN_WIDTH} from '../../utils/dimension';
+import {Colors} from '../constant/Colors';
 type Props = {
   order: string;
   setOrder: React.Dispatch<React.SetStateAction<string>>;

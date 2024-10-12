@@ -1,29 +1,23 @@
+import {NavigatorScreenParams} from '@react-navigation/native';
 import {
   createNativeStackNavigator,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import {LoaderStackRouts, RootStackRouts} from '../routes';
-import {NavigatorScreenParams} from '@react-navigation/native';
-import AuthNavigator, {AuthStackParamList} from './AuthNavigator';
-import TabsNavigator, {TabStackParamList} from './TabsNavigator';
-import {navigatorConfig} from '../navigatorConfig';
-import {PersistenceStorage} from '../../storage';
-import {KEYS} from '../../storage/Keys';
+import {useEffect} from 'react';
+import Toast from 'react-native-toast-message';
+import {useDispatch} from 'react-redux';
+import {GetSession} from '../../react-query/queries/auth/authQueries';
 import {
   selectIsAuthenticated,
   setIsAuthenticated,
   setUser,
 } from '../../store/authSlice';
 import {useAppSelector} from '../../store/store';
-import {
-  GetLogin,
-  GetSession,
-  Logout,
-} from '../../react-query/queries/auth/authQueries';
-import {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import {navigatorConfig} from '../navigatorConfig';
+import {RootStackRouts} from '../routes';
+import AuthNavigator, {AuthStackParamList} from './AuthNavigator';
 import LoaderNavigator from './LoaderNavigator';
-import Toast from 'react-native-toast-message';
+import TabsNavigator, {TabStackParamList} from './TabsNavigator';
 
 export type RootStackParamList = {
   [RootStackRouts.AUTH_STACK]: NavigatorScreenParams<AuthStackParamList>;

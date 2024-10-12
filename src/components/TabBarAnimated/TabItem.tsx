@@ -1,28 +1,21 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  LayoutChangeEvent,
-} from 'react-native';
-import React, {useMemo} from 'react';
 import {BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
+import React, {useMemo} from 'react';
+import {LayoutChangeEvent, Pressable, StyleSheet} from 'react-native';
 import Icon from 'react-native-easy-icon';
+import {IconType} from 'react-native-easy-icon/src/Icon';
+import Animated from 'react-native-reanimated';
 import {SCREEN_WIDTH} from '../../../utils/dimension';
+import {Colors} from '../../constant/Colors';
+import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
+import {TabStackRouts} from '../../navigators/routes';
+import {selectCart} from '../../store/cartSlice';
+import {useAppSelector} from '../../store/store';
+import {CText} from '../CText';
 import {
   useAnimatedCartLength,
   useAnimatedFont,
   useAnimatedText,
-  useAnimateTabs,
 } from './animateTabs';
-import Animated from 'react-native-reanimated';
-import {useThemeInterpolation} from '../../hooks/useThemeInterpolation';
-import {Colors} from '../../constant/Colors';
-import {CText} from '../CText';
-import {IconType} from 'react-native-easy-icon/src/Icon';
-import {useAppSelector} from '../../store/store';
-import {selectCart} from '../../store/cartSlice';
-import {CartStackRouts, TabStackRouts} from '../../navigators/routes';
 interface tabBarComponentProps {
   active: boolean;
   option: BottomTabNavigationOptions;

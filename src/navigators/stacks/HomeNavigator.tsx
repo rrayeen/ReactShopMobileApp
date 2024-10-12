@@ -2,10 +2,10 @@ import {
   createNativeStackNavigator,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
-import {HomeStackRouts} from '../routes';
-import {navigatorConfig} from '../navigatorConfig';
 import Home from '../../models/Tabs/Home/Home';
 import Product from '../../models/Tabs/Home/Product';
+import {navigatorConfig} from '../navigatorConfig';
+import {HomeStackRouts} from '../routes';
 
 export type HomeStackParamList = {
   [HomeStackRouts.HOME]: undefined;

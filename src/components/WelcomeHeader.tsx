@@ -1,11 +1,10 @@
-import {View, Text} from 'react-native';
 import React, {useMemo} from 'react';
+import {Colors} from '../constant/Colors';
+import {devices} from '../constant/images';
 import useOpacityDelay from '../hooks/useOpacityDelay';
 import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
-import {Colors} from '../constant/Colors';
-import TitleWithDelay from './TitleWithDelay';
 import {CImage} from './CImage';
-import {devices} from '../constant/images';
+import TitleWithDelay from './TitleWithDelay';
 type Props = {
   title: string;
   subTitle: string;

@@ -1,3 +1,4 @@
+import {ComponentType, useMemo, useRef} from 'react';
 import {
   Pressable,
   StyleProp,
@@ -8,10 +9,9 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {CText, TextColors, TextSizes} from './CText';
-import {ComponentType, useMemo, useRef} from 'react';
 import {Colors} from '../constant/Colors';
 import {useThemeInterpolation} from '../hooks/useThemeInterpolation';
+import {CText, TextColors, TextSizes} from './CText';
 
 type textInputStatuses = 'disabled' | 'error';
 
