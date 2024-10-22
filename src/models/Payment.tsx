@@ -23,7 +23,7 @@ type DataProps = {
   email: string;
   phone: string;
   address: string;
-  cartNumber: string;
+  cardNumber: string;
   cvc: string;
   expiry: string;
 };
@@ -53,7 +53,7 @@ const Payment = ({navigation}: CartStackScreenProps<'Payment'>) => {
       email: '',
       phone: '',
       address: user?.adress || '',
-      cartNumber: '',
+      cardNumber: '',
       cvc: '',
       expiry: '',
     },
@@ -173,14 +173,14 @@ const Payment = ({navigation}: CartStackScreenProps<'Payment'>) => {
                 minLength: 16,
                 maxLength: 16,
               }}
-              placeholderText="Cart Number"
-              labelText="Cart Number"
+              placeholderText="Card Number"
+              labelText="Card Number"
               labelSize="lg_bold"
-              name="cartNumber"
+              name="cardNumber"
               editable={true}
               maxLength={16}
               bottomText={
-                errors.cartNumber?.message || 'Cart Number is required'
+                errors.cardNumber?.message || 'Card Number is required'
               }
               inputWrapperStyle={{width: SCREEN_WIDTH * 0.8}}
             />
